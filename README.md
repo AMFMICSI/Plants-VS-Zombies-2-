@@ -1,170 +1,122 @@
-# Plants vs. Zombies-2 — Advanced Programming Project
+<div align="center">
 
-A hybrid **CLI + graphical** implementation of a Plants vs. Zombies inspired game, developed for the Advanced Programming course.  
-The project combines text-based menu workflows with a LibGDX-powered game screen, creating a single codebase that covers account management, progression systems, gameplay mechanics, and interactive rendering.
+# 🌻 Plants vs. Zombies
 
-## Overview
+### Four worlds. Many ways to play. One Java adventure.
 
-This repository implements a course project inspired by *Plants vs. Zombies* and follows a layered architecture to keep the code organized and maintainable.
+A desktop game inspired by **Plants vs. Zombies**, created for the Advanced Programming course at **Sharif University of Technology**.
 
-The application includes:
+![Java 21](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)
+![LibGDX](https://img.shields.io/badge/LibGDX-Desktop-E74C3C)
+![Gradle](https://img.shields.io/badge/Build-Gradle-02303A?logo=gradle&logoColor=white)
+![Team project](https://img.shields.io/badge/Team-3%20developers-3A8D5D)
 
-- **Command-line menus** for registration, login, profile management, collection browsing, settings, quests, leaderboard access, and more
-- **Graphical gameplay** using **LibGDX**
-- **Persistent user data** with local storage
-- **Chapter-based progression**
-- **Special minigames**
-- **Plant and zombie systems** with multiple categories, abilities, and interactions
-- **Tick-based game simulation** for time, waves, sun generation, and combat flow
+[Explore the game](#-explore-the-game) · [Features](#-features) · [Run locally](#-run-locally) · [Team](#-team)
 
-## Main Features
+</div>
 
-### CLI / Menu System
-The project includes a full menu framework with dedicated controllers and command parsing for:
+---
 
-- Register
-- Login
-- Main menu
-- Chapter and level selection
-- Plant selection
-- Settings
-- Network
-- News
-- Profile
-- Collection
-- Greenhouse
-- Shop
-- Travel log / quests
-- Leaderboard
-- In-game menu
-- End-of-game menu
+## 🎮 Explore the game
 
-This part of the project provides the management layer for the entire game experience, including account flow, progression, unlocks, and player-related data.
+Place plants, collect sun, and defend against waves of zombies across four themed chapters. The project combines graphical gameplay with account, collection, quest, and progression systems.
 
-### Graphical Game Layer
-The graphical side of the project is handled through LibGDX and includes:
+![Ancient Egypt gameplay](docs/screenshots/05-ancient-egypt.png)
 
-- A dedicated `GameScreen`
-- Screen management and transitions
-- Brightness control
-- Font management
-- Music management
-- HUD and health bar rendering
-- Real-time game state display
+<div align="center"><sub>Gameplay in Ancient Egypt</sub></div>
 
-### Chapters
-The adventure mode is organized into four chapters:
+### Adventure worlds
 
-- **Ancient Egypt**
-- **Frostbite Caves**
-- **Big Wave Beach**
-- **Dark Ages**
+| Ancient Egypt | Frostbite Caves |
+| :---: | :---: |
+| ![Ancient Egypt](docs/screenshots/05-ancient-egypt.png) | ![Frostbite Caves](docs/screenshots/06-frostbite-caves.png) |
+| Big Wave Beach | Dark Ages |
+| :---: | :---: |
+| ![Big Wave Beach](docs/screenshots/07-big-wave-beach.png) | ![Dark Ages](docs/screenshots/09-dark-ages.png) |
 
-These chapters define different environments, stage behavior, and gameplay rules.
+### Beyond adventure
 
-### Minigames
-The project also supports several special minigame modes:
+| Beghouled | I, Zombie |
+| :---: | :---: |
+| ![Beghouled](docs/screenshots/11-beghouled.png) | ![I, Zombie](docs/screenshots/12-izombie-board.png) |
+| Vasebreaker | Wallnut Bowling |
+| :---: | :---: |
+| ![Vasebreaker](docs/screenshots/13-vasebreaker.png) | ![Wallnut Bowling](docs/screenshots/14-wallnut-bowling.png) |
 
-- **Vasebreaker**
-- **Wallnut Bowling**
-- **I, Zombie**
-- **Beghouled**
-- **Zombotany** *(bonus / extra content)*
+<details>
+<summary><strong>View all other</strong> — menus, battles, collections, greenhouse, quests, and leaderboard</summary>
 
-### Plants
-The plant system is built around a broad set of plant families and behavior types.  
-Plants in the project are organized into categories such as:
+| Main Menu | Mode Selection |
+| :---: | :---: |
+| ![main-menu](docs/screenshots/01-main-menu.png) | ![mode-selection](docs/screenshots/02-mode-selection.png) |
 
-- Sun producers
-- Shooters
-- Lobbers
-- Explosives
-- Melee attackers
-- Defensive plants
-- Support / modifier plants
-- Through-strike plants
-- Homing plants
-- Mints
+| World Map | Plant Selection |
+| :---: | :---: |
+| ![world-map](docs/screenshots/03-world-map.png) | ![plant-selection](docs/screenshots/04-plant-selection.png) |
 
-This structure makes it possible to support varied plant behavior, special effects, plant-food interactions, and upgrades.
+| Beach Battle | Dark Ages Battle |
+| :---: | :---: |
+| ![beach-battle](docs/screenshots/08-beach-battle.png) | ![dark-ages-battle](docs/screenshots/10-dark-ages-battle.png) |
 
-### Zombies
-The zombie system includes a large variety of zombie archetypes across the different chapters, including:
+| Plant Collection | Zombie Collection |
+| :---: | :---: |
+| ![plant-collection](docs/screenshots/15-plant-collection.png) | ![zombie-collection](docs/screenshots/16-zombie-collection.png) |
 
-- Basic zombies
-- Armored zombies
-- Special-movement zombies
-- Ranged / caster-style zombies
-- Heavy zombies
-- Special boss-related or bonus-type enemies
+| Greenhouse | Quests |
+| :---: | :---: |
+| ![greenhouse](docs/screenshots/17-greenhouse.png) | ![quests](docs/screenshots/18-quests.png) |
 
-The codebase is designed around factory-based creation, scalable properties, status effects, and texture-path management.
+| Leaderboard | News |
+| :---: | :---: |
+| ![leaderboard](docs/screenshots/19-leaderboard.png) | ![news](docs/screenshots/20-news.png) |
 
-### Core Gameplay Systems
-The game logic includes:
+</details>
 
-- Tick-based time progression
-- Wave spawning and wave difficulty scaling
-- Sun production and sun collection
-- Lawn mowers / lane-ending defense
-- Plant food mechanics
-- Loot and reward drops
-- Unlock and progression systems
-- Combat handling and battle flow
-- Chapter and stage configuration
-- Quest tracking
-- Score / leaderboard integration
+## ✨ Features
 
-### Persistence
-The project stores user data locally so progress is preserved between runs.  
-It also includes encryption utilities and a file-based database layer for saved user information.
+- **Four themed chapters:** Ancient Egypt, Frostbite Caves, Big Wave Beach, and Dark Ages.
+- **Plant and zombie systems:** Different families, abilities, chapter enemies, and combat interactions.
+- **Game simulation:** Waves, sun generation, plant food, lawn mowers, rewards, and progression.
+- **Additional modes:** Vasebreaker, Wallnut Bowling, I, Zombie, and Beghouled.
+- **Player systems:** Accounts, collection, greenhouse, quests, shop, leaderboard, and locally saved progress.
+- **Hybrid interface:** LibGDX gameplay with command-line menu workflows.
 
-## Project Structure
+## 🚀 Run locally
 
-The codebase is organized into clear packages:
+### Requirements
 
-- `com.PVZ.controller` — app control and menu controllers
-- `com.PVZ.database` — local persistence and encryption utilities
-- `com.PVZ.model` — users, game state, chapters, plants, zombies, quests, and mechanics
-- `com.PVZ.screen` — LibGDX screens and rendering managers
-- `com.PVZ.view` — command parsing, DTOs, and terminal/UI rendering helpers
-- `com.PVZ.util` — bootstrap and helper utilities
-- `com.PVZ.config` — configuration values
+- **JDK 21**
+- Internet access on the first run to download Gradle dependencies
 
-## Tech Stack
+The Gradle wrapper is included; a separate Gradle installation is unnecessary. Run from the repository root:
 
-- **Java**
-- **LibGDX**
-- **Gradle**
-- **Jackson** for JSON serialization/deserialization
+**Windows**
 
-## How to Run
-
-The project is designed to be run with Gradle.
-
-### Windows
-```bash
-gradlew.bat lwjgl3:run
+```powershell
+.\gradlew.bat lwjgl3:run
 ```
 
-### Linux / macOS
+**Linux / macOS**
+
 ```bash
 ./gradlew lwjgl3:run
 ```
 
-If your environment already provides a Gradle wrapper path or a project launcher, the same task name `lwjgl3:run` is the entry point for the graphical application.
+## 🧱 Under the hood
 
-## Team
+| Path | What it contains |
+| --- | --- |
+| `core/` | Game logic, models, controllers, persistence, and screens |
+| `lwjgl3/` | Desktop launcher and runtime configuration |
+| `assets/` | Game art, audio, and other assets |
+| `config/` | Checkstyle and PMD configuration |
 
-This project was developed by:
+**Stack:** Java 21 · LibGDX · Gradle · Jackson
 
-- **Fatemeh Mostafavi**
-- **Ali Ariakia**
-- **Mahdi HajEbrahimi**
+## 👥 Team
 
-## Notes
+Developed as a three-person Advanced Programming project:
 
-- The project is a coursework implementation inspired by *Plants vs. Zombies*.
-- It combines a command-line layer with a graphical runtime to cover both management and gameplay flows.
-- The current codebase is structured for future expansion, balancing, and content growth.
-
+- **Fatemeh Mostafavi** — [@AMFMICSI](https://github.com/AMFMICSI)
+- **Ali Ariakia** — [@Hichcas](https://github.com/Hichcas)
+- **Mahdi HajEbrahimi** — [@MahdiHEbrahimi](https://github.com/MahdiHEbrahimi)
