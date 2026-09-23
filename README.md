@@ -21,9 +21,14 @@ A desktop game inspired by **Plants vs. Zombies**, created for the Advanced Prog
 
 Place plants, collect sun, and defend against waves of zombies across four themed chapters. The project combines graphical gameplay with account, collection, quest, and progression systems.
 
-![Ancient Egypt gameplay](docs/screenshots/05-ancient-egypt.png)
+## 🎮 Gameplay
 
-<div align="center"><sub>Gameplay in Ancient Egypt</sub></div>
+<p align="center">
+  <img src="docs/game_play/GamePlay_Gif.gif" alt="Gameplay preview">
+  <br><br>
+  <a href="docs/game_play/Gameplay_Project.mp4">▶ Watch the full gameplay</a>
+</p>
+
 
 ### Adventure worlds
 
